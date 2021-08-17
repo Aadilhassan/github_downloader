@@ -18,5 +18,5 @@ This project is still in development so as of now
  You can download linux and windows executables from the releases.
  
      
-When you run the program it will ask for link to the link
-and the the repositories' folder will download in a output folder.
+When you run the program it will ask for link to the required  folder
+and the folder will download inside a folder named "output".
