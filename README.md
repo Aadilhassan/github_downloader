@@ -15,6 +15,6 @@ This project is still in development so as of now
  it cannot download whole repo or just a  single file.
  It will give errors when a non github link is provided.
  
- You can download a linux excutable from the given link:
+ You can download linux and windows executables from the releases.
  
      
