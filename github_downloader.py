@@ -19,7 +19,7 @@ def fit(t):
         t[i]['type']='file'
      else :
         t[i]['type']='move_up'
-     i=#     print(i)
+     i=i+1
  
  
 def rel(t,master):
