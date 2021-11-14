@@ -9,8 +9,7 @@ def diz(u):
 def fit(t):
   i=0
   while i<len(t):
-     if ( (t[i]["link"].find("/tree/")+1) and (t[i]["name"]!=None) ):
-        
+     if ( (t[i]["link"].find("/tree/")+1) and (t[i]["name"]!=None) ) :
         t[i]['type']='folder'
      elif (t[i]["link"].find("/blob/")+1):
         r1=t[i]["link"].find("/blob/")
@@ -23,15 +22,11 @@ def fit(t):
  
  
 def rel(t,master):
-#  s=t.copy()
-# print(s)
   for r in t:
-#    print(r['type'])
     if r['type']=="folder":
         data=scrape("https://github.com"+r["link"])
         t=data["branches"]
         fit(t)
-#        print(t)
         rel(t,master)
         master.append(t)
  
@@ -89,19 +84,9 @@ data=scrape(url)
 t=data["branches"]
 fit(t)
 
-
-
-
 master=[]
-#tem=[]
-#tem.append(t[0]["link"][])
-#tem.append(t)
 master.append(t)
-
 rel(t,master)
-
-
-
 
 try:
     os.mkdir("output")
