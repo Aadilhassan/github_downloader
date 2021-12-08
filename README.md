@@ -7,16 +7,15 @@ This python program download any folder from a github repository.
 Required python libraries  :
      
      
-     selectorlib
-     requests
+     pip install selectorlib requests
      
+     
+ 
+ ## usage:
+ 
+     python github_downloader <url of github folder> <path where folder needs to be downloaded>
 
 This project is still in development so as of now
  it cannot download whole repo or just a  single file(only a folder i.e. all internal folders and it's all files)
  It will give errors when a non github link is provided.
  
- You can download linux and windows executables from the releases.
- 
-     
-When you run the program it will ask for link to the required  folder
-and the folder will download inside a folder named "output".
