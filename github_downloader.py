@@ -1,3 +1,4 @@
+import sys
 from selectorlib import Extractor
 import requests 
 import os
@@ -68,7 +69,7 @@ def scrape(url):
 e = Extractor.from_yaml_file('selector.yml')
 
 
-url=input("enter url")
+url=sys.argv[1]
 urt=url
 while True :
    ur=urt.find("/")+1
@@ -88,24 +89,20 @@ master=[]
 master.append(t)
 rel(t,master)
 
+path = sys.argv[2]
+
 try:
-    os.mkdir("output")
+    os.mkdir(path)
 except:
-    pass
-os.mkdir(os.path.join("output",urt))
-urt1="output/"+urt
+    print("hello control passed from except")
+os.mkdir(os.path.join(path,urt))
+urt1=path+"/"+urt
 for r in master:
    for r1 in r:
     if r1["type"]=="folder":
         os.mkdir(urt1+diz(r1["link"]))
         
         
-
-
-
-
-
-
 for r in master:
     for r1 in r:
         if r1["type"]=="file":
