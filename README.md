@@ -1,13 +1,11 @@
 # github_downloader
-download folders from github
+This python program will let you download specific folders from any  github repository.
 
-
-This python program download any folder from a github repository.
 
 Required python libraries  :
      
      
-     pip install selectorlib requests
+    pip install selectorlib requests 
      
      
  
